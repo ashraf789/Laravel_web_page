@@ -1,4 +1,0 @@
-
-@include('masterPage')
-
-@include('footer')

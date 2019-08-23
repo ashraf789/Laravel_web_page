@@ -16,6 +16,8 @@
 // });
 
 Route::any('/','Home@index');
+
+//Login route
 Auth::routes();
 Route::any('/login','Auth\LoginController@login');
 

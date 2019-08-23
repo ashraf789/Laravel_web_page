@@ -18,7 +18,8 @@
         </ul>
     </nav>
 
-
+@yield('content')
+@include('footer')
     <!-- Load java script at last -->
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>

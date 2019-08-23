@@ -2,7 +2,8 @@
 <head>
     <title>Main page</title>
 </head>
-@include('masterPage')
+@extends('masterPage')
+@section('content')
     <div class="container">
         <div class="row">
 
@@ -23,4 +24,4 @@
             @endforeach
         </div>
     </div>
-@include('footer')
+@endsection
