@@ -15,24 +15,27 @@
 //     return view('welcome');
 // });
 
-Route::any('/','Home@index');
+Route::any('/','Home@index')->name('home');
 
 Auth::routes();
 
 //Login route
-Route::get('login2', function(){
+Route::get('userLogin', function(){
 return view('auth/login');
-});
-Route::POST('login2','Auth\LoginController@user_login')->name('test'); 
+})->name('userLogin');
+Route::POST('userLogin','Auth\LoginController@authenticate')->name('userLogin');
 
 Route::GET('signUp',function(){
     return view('auth/register');
-});
-Route::POST('signUp','Auth\RegisterController@createUser');
+})->name('userRegistration');
+
+Route::POST('signUp','Auth\RegisterController@createUser')->name('userRegistration');
 
 Route::any('/postDetails/{id}','PostController@postDetails');
 // Route::get('/home', 'HomeController@index')->name('home');
 
+// Dashboard route
+Route::any('/dashboard','DashboardController@dashboard')->name('dashboard');
 Route::get('test',function(){
     return view('welcome');
-});
+})->name('test');

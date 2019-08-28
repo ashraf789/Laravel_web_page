@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -35,26 +35,26 @@ class LoginController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest')->except('logout');
-    // }
 
-    /*
-        Search user on database
-        Database row query
-    */
-    public function user_login(Request $request){
-        // $user = DB::select('select *from ');
-        $credentials = $request->only('email', 'password');
+    public function authenticate(Request $request){
+        $credentials = $request->only('email','password');
 
-        if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            // return redirect()->intended('dashboard');
-            echo "not a valid user";
+        // if (Auth::attempt($credentials)) {
+        //     // authenticatoin passed
+        //     return redirect()->route('home');
+        // }else{
+        //     return redirect()->back()->withErrors("Wrong email or password!");
+        // }
+
+        $remember = true;
+        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember)) {
+            // authenticatoin passed
+
+            Session::put('user_name', $request->input('email'));
+            return redirect()->route('home');
+
         }else{
-            echo "not valid user";
+            return redirect()->back()->withErrors("Wrong email or password!");
         }
-
     }
 }

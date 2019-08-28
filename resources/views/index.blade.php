@@ -6,8 +6,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-
-            @foreach ($all_post as $post)
+        </br>
+        @foreach ($all_post as $post)
             <div class = "col s12 m10 offset-m1">
                 <div class = "card grey lighten-4 hoverable">
                     <div class = "card-content">
@@ -16,11 +16,11 @@
 
                         <br>
                         <strong>{{$post->create_at}}</string>
-                        <button class = "btn right brown  lighten-4"><a class = "grey-text text-darken-3" href = "postDetails/{{$post->id}}">read more</a></button>
-                        <br>
+                            <button class = "btn right brown  lighten-4"><a class = "grey-text text-darken-3" href = "postDetails/{{$post->id}}">read more</a></button>
+                            <br>
+                        </div>
                     </div>
                 </div>
-            </div>
             @endforeach
         </div>
     </div>
