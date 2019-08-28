@@ -36,8 +36,9 @@ Route::any('/postDetails/{id}','PostController@postDetails');
 // Route::get('/home', 'HomeController@index')->name('home');
 
 // Dashboard route
-Route::any('/dashboard','DashboardController@dashboard')->name('dashboard');
-Route::any('/dashboard/blog','BlogController@blogPost')->name('blog');
+Route::any('dashboard','DashboardController@blogPost')->name('dashboard');
+// Dashboard route
+Route::any('dashboard/post/edit/{id}','DashboardController@postEdit')->name('postEdit');
 
 
 Route::get('test',function(){

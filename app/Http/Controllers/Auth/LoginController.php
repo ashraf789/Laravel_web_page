@@ -51,7 +51,7 @@ class LoginController extends Controller
             // authenticatoin passed
 
             Session::put('user_name', $request->input('email'));
-            return redirect()->route('home');
+            return redirect()->route('dashboard');
 
         }else{
             return redirect()->back()->withErrors("Wrong email or password!");

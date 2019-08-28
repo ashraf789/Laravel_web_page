@@ -32,7 +32,7 @@
     <nav class="nav-wrapper  grey lighten-5">
         <ul class="left nav-mobile">
             @if (Session::has('user_name'))
-                <li><a class="brown-text brown lighten-5" href="{{route('blog')}}"><b>DASHBOARD</b></a></li>
+                <li><a class="brown-text brown lighten-5" href="{{route('dashboard')}}"><b>DASHBOARD</b></a></li>
             @else
                 <li><a class="brown-text brown lighten-5" href="#"><b>WELCOME</b></a></li>
             @endif

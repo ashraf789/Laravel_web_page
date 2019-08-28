@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="row">
-        <div style="height:100%;" class = "col s4 m3 l2 deep-purple darken-2 grey-text text-lighten-5">
+        <div style="height:100%;" class = "col s12 m3 l2 deep-purple darken-2 grey-text text-lighten-5">
             <ul>
                 <li><strong><a class="grey-text text-lighten-5" href="#">Blog</a></strong></li>
             </br>

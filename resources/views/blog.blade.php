@@ -9,7 +9,7 @@
                             {{$post->create_at}}
                         </string>
                         <div class="right  grey-text text-darken-3">
-                            <a style="padding:5px" class="hoverable brown lighten-4" href = "postDetails/{{$post->id}}">
+                            <a style="padding:5px" href="{{route('postEdit',$post->id)}}" class="hoverable brown lighten-4" href = "postDetails/{{$post->id}}">
                                 <strong>EDIT</strong>
                             </a>
                             <a style="margin-left: 5px; padding: 5px" class="hoverable brown lighten-4" href = "postDetails/{{$post->id}}">
