@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Resume</title>
+    <title>Personal page</title>
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('materialize/css/materialize.min.css')}}">
 </head>
 <body>
@@ -13,8 +13,8 @@
         <ul class="right">
             <li><a class="grey-text text-darken-1" href="/"><b>HOME</b></a></li>
             <li><a class="grey-text text-darken-1" href="#"><b>CONTACT</b></a></li>
-            <li><a class="grey-text text-darken-1" href="login"><b>LOGIN</b></a></li>
-            <li><a class="grey-text text-darken-1" href="#"><b>SIGN UP</b></a></li>
+            <li><a class="grey-text text-darken-1" href="/login"><b>LOGIN</b></a></li>
+            <li><a class="grey-text text-darken-1" href="/signUp"><b>SIGN UP</b></a></li>
         </ul>
     </nav>
 

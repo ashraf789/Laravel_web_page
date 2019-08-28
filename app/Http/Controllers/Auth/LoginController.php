@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -37,9 +40,21 @@ class LoginController extends Controller
     //     $this->middleware('guest')->except('logout');
     // }
 
-    public function login(){
-        // return view('index');
-        return view('auth\login');
+    /*
+        Search user on database
+        Database row query
+    */
+    public function user_login(Request $request){
+        // $user = DB::select('select *from ');
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            // return redirect()->intended('dashboard');
+            echo "not a valid user";
+        }else{
+            echo "not valid user";
+        }
 
     }
 }
