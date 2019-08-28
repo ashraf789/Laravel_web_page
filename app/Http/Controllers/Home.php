@@ -30,7 +30,7 @@ class Home extends BaseController
 		$post = DB::table('post')->get();
 		// $post = DB::select(DB::row('SELECT * FROM `post` '));
 		return view('index')->with('all_post',$post);
-		// return view('index');
+
 	}
 }
 ?>

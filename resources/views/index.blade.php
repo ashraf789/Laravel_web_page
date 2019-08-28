@@ -15,13 +15,17 @@
                         <p>{{ str_limit($post->article,$limit=250, $end = '....')}}</p>
 
                         <br>
-                        <strong>{{$post->create_at}}</string>
-                            <button class = "btn right brown  lighten-4"><a class = "grey-text text-darken-3" href = "postDetails/{{$post->id}}">read more</a></button>
-                            <br>
-                        </div>
+                        <strong>
+                            {{$post->create_at}}
+                        </string>
+                        <a href = "postDetails/{{$post->id}}">
+                            <button class = "btn right brown  lighten-4 grey-text text-darken-3">read more</button>
+                        </a>
+                        <br>
                     </div>
                 </div>
-            @endforeach
-        </div>
+            </div>
+        @endforeach
     </div>
+</div>
 @endsection

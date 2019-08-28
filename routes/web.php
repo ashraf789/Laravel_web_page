@@ -25,6 +25,7 @@ return view('auth/login');
 })->name('userLogin');
 Route::POST('userLogin','Auth\LoginController@authenticate')->name('userLogin');
 
+Route::any('logout','Auth\LogoutController@logout')->name('logout');
 Route::GET('signUp',function(){
     return view('auth/register');
 })->name('userRegistration');
@@ -36,6 +37,9 @@ Route::any('/postDetails/{id}','PostController@postDetails');
 
 // Dashboard route
 Route::any('/dashboard','DashboardController@dashboard')->name('dashboard');
+Route::any('/dashboard/blog','BlogController@blogPost')->name('blog');
+
+
 Route::get('test',function(){
     return view('welcome');
 })->name('test');
