@@ -10,3 +10,21 @@ Laravel practice project(CRUD operation)
 * Add new post
 * Edit post 
 * Delete post 
+
+## Some screenshort 
+
+</br>
+<img src="https://i.imgur.com/wvYYX2Q.png" />
+</br>
+
+</br>
+<img  src="https://i.imgur.com/JisJJw9.png" />
+</br>
+
+</br>
+<img  src="https://i.imgur.com/lpBQZ5S.png" />
+</br>
+</br>
+<img  src="https://i.imgur.com/cSED9iJ.png" />
+</br>
+
