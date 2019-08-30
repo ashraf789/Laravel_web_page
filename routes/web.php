@@ -21,8 +21,8 @@ Auth::routes();
 
 //Login route
 Route::get('userLogin', function(){
-return view('auth/login');
-})->name('userLogin');
+    return view('auth/login');
+})->name('userLogin')->name('userLogin');
 Route::POST('userLogin','Auth\LoginController@authenticate')->name('userLogin');
 
 Route::any('logout','Auth\LogoutController@logout')->name('logout');
@@ -38,10 +38,12 @@ Route::any('/postDetails/{id}','PostController@postDetails');
 // Dashboard route
 Route::any('dashboard','DashboardController@blogPost')->name('dashboard');
 // Dashboard route
-Route::any('dashboard/post/edit/{id}','DashboardController@postEdit')->name('postEdit');
-
+Route::get('dashboard/post/add','DashboardController@postAdd')->name('postAdd');
+Route::get('dashboard/post/edit/{id}','DashboardController@postEdit')->name('postEdit');
 // blog post controller
-Route::any('dashboard/post/update/{id}','PostUpdateController@updatePost')->name('postUpdate');
+Route::post('dashboard/post/submit','PostController@submitPost')->name('postSubmit');
+Route::any('dashboard/post/update/{id}','PostController@updatePost')->name('postUpdate');
+Route::any('dashboard/post/delete/{id}','PostController@postDelete')->name('postDelete');
 
 
 Route::get('test',function(){

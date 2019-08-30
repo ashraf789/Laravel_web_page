@@ -9,9 +9,5 @@ class User extends Authenticatable{
     protected $fillable = [
         'name', 'email', 'password','remember_token',
     ];
-
-    public function show(){
-        echo $fillable['name'];
-    }
 }
 ?>

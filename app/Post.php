@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    // protected $fillable = [
-    //     'name', 'email', 'password','remember_token',
-    // ];
+    protected $table = 'post';
+    public $timestamps = false;
+    protected $fillable = [
+            'title','article','user_id',
+    ];
 }

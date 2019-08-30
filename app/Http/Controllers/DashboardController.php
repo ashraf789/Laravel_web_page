@@ -7,6 +7,10 @@ use App\Http\Controllers\Auth;
 
 class DashboardController extends Controller
 {
+    // Add post btn click
+    public function postAdd(){
+        return view('dashboard/postEdit');
+    }
     /*
         Show all blog post into dashboard page
     */
@@ -28,13 +32,5 @@ class DashboardController extends Controller
         ->get();
         return view('dashboard/postEdit')->with('post',$post[0]);
     }
-
-
-
-    // Delete blog post
-    public function postDelete($postId){
-        echo $postId;
-    }
-
 
 }

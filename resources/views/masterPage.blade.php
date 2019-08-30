@@ -46,8 +46,8 @@
             @if (Session::has('user_name'))
                 <li><a class="grey-text text-darken-1" href="{{ route('logout') }}"><b>LOG OUT</b></a></li>
             @else
-                <li><a class="grey-text text-darken-1" href="/login"><b>LOGIN</b></a></li>
-                <li><a class="grey-text text-darken-1" href="/"><b>SIGN UP</b></a></li>
+                <li><a class="grey-text text-darken-1" href="{{route('userLogin')}}"><b>LOGIN</b></a></li>
+                <li><a class="grey-text text-darken-1" href="{{route('userRegistration')}}"><b>SIGN UP</b></a></li>
             @endif
         </ul>
     </nav>
