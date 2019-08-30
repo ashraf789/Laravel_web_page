@@ -15,16 +15,21 @@ class DashboardController extends Controller
         $user = \Auth::user();
 
         // Get all data for current user
-        $post = DB::table('post')
-        ->where('id', $user->id)
+        $allPost = DB::table('post')
+        ->where('user_id', $user->id)
         ->get();
-        return view('blog')->with('all_post',$post);
+        return view('dashboard/blog')->with('all_post',$allPost);
     }
 
     // Edit blog post
     public function postEdit($postId){
-        echo $postId;
+        $post = DB::table('post')
+        ->where('id', $postId)
+        ->get();
+        return view('dashboard/postEdit')->with('post',$post[0]);
     }
+
+
 
     // Delete blog post
     public function postDelete($postId){

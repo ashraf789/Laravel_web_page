@@ -40,6 +40,9 @@ Route::any('dashboard','DashboardController@blogPost')->name('dashboard');
 // Dashboard route
 Route::any('dashboard/post/edit/{id}','DashboardController@postEdit')->name('postEdit');
 
+// blog post controller
+Route::any('dashboard/post/update/{id}','PostUpdateController@updatePost')->name('postUpdate');
+
 
 Route::get('test',function(){
     return view('welcome');

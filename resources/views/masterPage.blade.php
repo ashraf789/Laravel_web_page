@@ -5,8 +5,9 @@
     <title>Personal page</title>
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('materialize/css/materialize.min.css')}}">
 
+    {{-- CDN link not work at the bottom of page --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <style>
-
     body {display: flex;min-height: 100vh;flex-direction: column;}
     main {flex: 1 0 auto;}
     footer {
@@ -27,6 +28,7 @@
         }
     }
     </style>
+
 </head>
 <body>
     <nav class="nav-wrapper  grey lighten-5">
@@ -78,7 +80,8 @@
             </div>
         </div>
     </footer>
+
     <!-- Load java script at last -->
-    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('materialize/js/materialize.min.js') }}"></script>
 </body>
 </html>
