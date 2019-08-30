@@ -45,6 +45,9 @@ Route::post('dashboard/post/submit','PostController@submitPost')->name('postSubm
 Route::any('dashboard/post/update/{id}','PostController@updatePost')->name('postUpdate');
 Route::any('dashboard/post/delete/{id}','PostController@postDelete')->name('postDelete');
 
+// contact page
+Route::get('/contact','ContactController@contactView')->name('contact');
+Route::post('/contact','ContactController@saveUserRequest')->name('contact');
 
 Route::get('test',function(){
     return view('welcome');

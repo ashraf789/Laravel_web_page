@@ -18,7 +18,7 @@
                             <div class="row margin">
                                 <div class="input-field col s12">
                                     <i class="mdi-social-person-outline prefix"></i>
-                                    <input id="name" name="name" type="text" value = "hello_ashraf"
+                                    <input id="name" name="name" type="text"
                                     class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                         <label for="user_name" class="center-align">Username</label>
                                         @error('name')
@@ -31,7 +31,7 @@
                                 <div class="row margin">
                                     <div class="input-field col s12">
                                         <i class="mdi-communication-email prefix"></i>
-                                        <input id="user_email" type="email" value="ashrafswe789@gmail.com" class="validate @error('user_email') is-invalid @enderror" name="email"  required autocomplete="email ">
+                                        <input id="user_email" type="email" class="validate @error('user_email') is-invalid @enderror" name="email"  required autocomplete="email">
                                             <label for="user_email" class="center-align">Email</label>
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -43,7 +43,7 @@
                                     <div class="row margin">
                                         <div class="input-field col s12">
                                             <i class="mdi-action-lock-outline prefix"></i>
-                                            <input id="user_password" value="123456" type="password" name="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                            <input id="user_password" type="password" name="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                                 <label for="user_password">Password</label>
                                                 @error('password')
                                                     <span class="invalid-feedback" role="alert">
@@ -55,7 +55,7 @@
                                         <div class="row margin">
                                             <div class="input-field col s12">
                                                 <i class="mdi-action-lock-outline prefix"></i>
-                                                <input id="confirm_pass" value="123456" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                                <input id="confirm_pass" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                                 <label for="confirm_pass">Re-type password</label>
                                                 {{-- retrive all error --}}
 
