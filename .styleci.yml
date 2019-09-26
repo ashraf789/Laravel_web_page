@@ -6,5 +6,5 @@ finder:
     - node_modules
     - storage
     - vendor
-  name: "*.php"
-  not-name: "*.blade.php"
+  name: "*.blade.php"
+  not-name: "*.php"
