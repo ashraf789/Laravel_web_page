@@ -9,6 +9,6 @@ class Post extends Model
     protected $table = 'post';
     public $timestamps = false;
     protected $fillable = [
-            'title','article','user_id',
+            'title', 'article', 'user_id',
     ];
 }

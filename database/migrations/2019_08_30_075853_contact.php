@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class Contact extends Migration
 {
@@ -13,7 +13,7 @@ class Contact extends Migration
      */
     public function up()
     {
-        Schema::create('contact',function(Blueprint $table){
+        Schema::create('contact', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email');
@@ -21,7 +21,7 @@ class Contact extends Migration
             $table->timestamp('create_at');
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
-            $table->collation = "utf8_general_ci";
+            $table->collation = 'utf8_general_ci';
         });
     }
 

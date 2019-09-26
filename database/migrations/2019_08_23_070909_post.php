@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class Post extends Migration
 {
@@ -13,7 +13,7 @@ class Post extends Migration
      */
     public function up()
     {
-        Schema::create('post', function(Blueprint $table){
+        Schema::create('post', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('article');
@@ -27,7 +27,8 @@ class Post extends Migration
 
     /**
      * Reverse the migrations.
-     * Delete old table if exist
+     * Delete old table if exist.
+     *
      * @return void
      */
     public function down()
