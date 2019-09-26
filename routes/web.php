@@ -15,40 +15,40 @@
 //     return view('welcome');
 // });
 
-Route::any('/','Home@index')->name('home');
+Route::any('/', 'Home@index')->name('home');
 
 Auth::routes();
 
 //Login route
-Route::get('userLogin', function(){
+Route::get('userLogin', function () {
     return view('auth/login');
 })->name('userLogin')->name('userLogin');
-Route::POST('userLogin','Auth\LoginController@authenticate')->name('userLogin');
+Route::POST('userLogin', 'Auth\LoginController@authenticate')->name('userLogin');
 
-Route::any('logout','Auth\LogoutController@logout')->name('logout');
-Route::GET('signUp',function(){
+Route::any('logout', 'Auth\LogoutController@logout')->name('logout');
+Route::GET('signUp', function () {
     return view('auth/register');
 })->name('userRegistration');
 
-Route::POST('signUp','Auth\RegisterController@createUser')->name('userRegistration');
+Route::POST('signUp', 'Auth\RegisterController@createUser')->name('userRegistration');
 
-Route::any('/postDetails/{id}','PostController@postDetails');
+Route::any('/postDetails/{id}', 'PostController@postDetails');
 // Route::get('/home', 'HomeController@index')->name('home');
 
 // Dashboard route
-Route::any('dashboard','DashboardController@blogPost')->name('dashboard');
+Route::any('dashboard', 'DashboardController@blogPost')->name('dashboard');
 // Dashboard route
-Route::get('dashboard/post/add','DashboardController@postAdd')->name('postAdd');
-Route::get('dashboard/post/edit/{id}','DashboardController@postEdit')->name('postEdit');
+Route::get('dashboard/post/add', 'DashboardController@postAdd')->name('postAdd');
+Route::get('dashboard/post/edit/{id}', 'DashboardController@postEdit')->name('postEdit');
 // blog post controller
-Route::post('dashboard/post/submit','PostController@submitPost')->name('postSubmit');
-Route::any('dashboard/post/update/{id}','PostController@updatePost')->name('postUpdate');
-Route::any('dashboard/post/delete/{id}','PostController@postDelete')->name('postDelete');
+Route::post('dashboard/post/submit', 'PostController@submitPost')->name('postSubmit');
+Route::any('dashboard/post/update/{id}', 'PostController@updatePost')->name('postUpdate');
+Route::any('dashboard/post/delete/{id}', 'PostController@postDelete')->name('postDelete');
 
 // contact page
-Route::get('/contact','ContactController@contactView')->name('contact');
-Route::post('/contact','ContactController@saveUserRequest')->name('contact');
+Route::get('/contact', 'ContactController@contactView')->name('contact');
+Route::post('/contact', 'ContactController@saveUserRequest')->name('contact');
 
-Route::get('test',function(){
+Route::get('test', function () {
     return view('welcome');
 })->name('test');
